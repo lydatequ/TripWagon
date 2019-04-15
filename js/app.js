@@ -13,9 +13,9 @@ function init (){
     function jsonHandleer (data) {
         
         let entries = data [1].entries;
-        console.log (entries); 
+        // console.log (entries); 
         
-        entries.map (getCity); //Array {Hotel} x 4
+        let cities = entries.map (getCity); //Array {Hotel} x 4
 
         function getCity (hotel) {
             return hotel.city;
@@ -37,7 +37,7 @@ function init (){
     }
 
     $.ajax (options);
-    
+
 }
 
 
