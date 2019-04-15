@@ -5,7 +5,16 @@ jQuery (init);
 //Our Application logic goes here: 
 function init (){
 
-    console.log ( "Ready");
+    let options = {
+        url: "data.json",
+        success: jsonHandleer
+    }
+
+    function jsonHandleer (data) {
+        console.log ( data );
+    }
+
+    $.ajax (options);
 }
 
 
