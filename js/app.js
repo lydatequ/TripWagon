@@ -11,10 +11,33 @@ function init (){
     }
 
     function jsonHandleer (data) {
-        console.log ( data );
+        
+        let entries = data [1].entries;
+        console.log (entries); 
+        
+        entries.map (getCity); //Array {Hotel} x 4
+
+        function getCity (hotel) {
+            return hotel.city;
+        }
+
+        function removeDups (names){
+            let unique = {};
+            names.forEach (function(i) {
+                if (!unique[i]){
+                    unique [i]= true;
+                }
+            })
+            return Object.keys(unique);
+        }
+
+        let uniqueCities = removeDups(cities);
+
+        console.log (uniqueCities);
     }
 
     $.ajax (options);
+    
 }
 
 
