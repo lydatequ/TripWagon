@@ -20,14 +20,15 @@ function init( $ ){
     }
 
     function createOptions( listOfCities ){
-
+        // 1. Get datalist
         let datalist = document.querySelector( "#cities-list" );
+        // 1.1 TEST!!
+        // 2. Loop over unique cities array
         listOfCities.map( addOption );
 
         function addOption( city ){
             datalist.innerHTML += `<option value="${ city }"></option>`;
         }
-
     }
 
     function jsonHandler( data ){
